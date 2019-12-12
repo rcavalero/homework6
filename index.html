@@ -28,20 +28,16 @@
         </div>
         <br>
         <div class="row bg-info">
-            <div class = "col bg-dark">first column
+            <div class = "col-4 bg-dark">first column
                 <div class = "row bg-light">
                     <div class = "col">
                         <div class="row">
                             <div class = "col bg-warning">
                                 <h4>Search for a City:</h4>
-                                <div class="input-group md-form form-sm form-2 pl-0">
-                                    <input class="form-control my-0 py-1 " type="text" aria-label="Search">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text bg-primary" id="basic-text1"><i class="fas fa-search text-white"
-                                                aria-hidden="true"></i></span>
-                                        </div>
-                                    </input>
-                                </div>
+                                <form>
+                                    <input id="robert" type="text" name="robert">
+                                    <button id="searchBtn" type="submit">button</button>
+                                </form>
                             </div>
                         </div>
                         <div class="row">
@@ -53,32 +49,33 @@
                     </div>
                 </div>
             </div>
-            <div class = "col"> second column
+            <div class = "col-8"> second column
                 <!-- this is the right side -->
                 <div class="container">
                     <div class = "row">
                         <div class = "col bg-success">
-                            <p> Selected city info</p>
+                            <h4 id="searchedCity"> Searched city info</h4>
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class = "row"> -->
+                        <div class = "col ">
+                                <img id="currCondIcon" src= "http://openweathermap.org/img/wn/10n@2x.png" alt="image"></a>
                         </div>
                     </div>
                     <div class = "row">
                         <div class = "col bg-success">
-                            <p> Tempurature</p>
+                                <p id="currTemp"></p>
+                            <p id="currHumid"></p>
                         </div>
                     </div>
                     <div class = "row">
                         <div class = "col bg-success">
-                            <p> Humidity</p>
+                            <p id="currWind"></p>
                         </div>
                     </div>
                     <div class = "row">
                         <div class = "col bg-success">
-                            <p> Wind Speed</p>
-                        </div>
-                    </div>
-                    <div class = "row">
-                        <div class = "col bg-success">
-                            <p> UV Info</p>
+                            <p id="currUV"> UV Info:</p>
                         </div>
                     </div>
                 </div>
@@ -88,20 +85,20 @@
                     </div>
                 </div>
                 <div class= "row">
-                    <div class = "col bg-warning">
-                        <p>1st day</p>
+                    <div id="forecast1" class = "col bg-warning">
+                        <!-- <p>1st day</p> -->
                     </div>
-                    <div class = "col col be-primary">
-                        <p>2nd day</p>
+                    <div id = "forecast2" class = "col col be-primary">
+                        <!-- <p>2nd day</p> -->
                     </div>
-                    <div class = "col bg-warning">
-                        <p>3rd day</p>
+                    <div id = "forecast3" class = "col bg-warning">
+                        <!-- <p>3rd day</p> -->
                     </div>
-                    <div class = "col be-primary">
-                        <p>4th day</p>
+                    <div id = "forecast4" class = "col be-primary">
+                        <!-- <p>4th day</p> -->
                     </div>
-                    <div class = "col bg-warning">
-                        <p>5th day</p>
+                    <div id = "forecast5" class = "col bg-warning">
+                        <!-- <p>5th day</p> -->
                     </div>
                 </div>
             </div>
@@ -114,6 +111,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
 <script type="text/javascript" src = "assets/js/script.js">
 </script>
 
