@@ -1,5 +1,3 @@
-console.log("linked");
-
 // Instructions
 // Build a weather dashboard application with search functionality to find current weather 
 // conditions and the future weather outlook for multiple cities. 
@@ -21,7 +19,7 @@ console.log("linked");
     // Wind speed
     // UV index
 
-
+  
 // Include a search history so that users can access their past search terms. 
 // Clicking on the city name should perform a new search that returns current and future conditions for that city.
 

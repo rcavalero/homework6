@@ -5,20 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HW6 Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 
 <body>
 
-
-    <!-- Retrieved data will be dumped here -->
-  <div class="city"></div>
-  <div class="wind"></div>
-  <div class="humidity"></div>
-  <div class="temp"></div>
+    <div class = "container">Container
+        <div class = "row bg-dark">
+            <div class = "col text-white text-center">
+                <h1>Weather Dashboard</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row bg-info">
+            <div class = "col bg-dark">first column
+                <div class = "row bg-light">
+                    <div class = "col">
+                        <div class="row">
+                            <div class = "col bg-warning">
+                                <h4>Search for a City:</h4>
+                                <div class="input-group md-form form-sm form-2 pl-0">
+                                    <input class="form-control my-0 py-1 " type="text" aria-label="Search">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-primary" id="basic-text1"><i class="fas fa-search text-white"
+                                                aria-hidden="true"></i></span>
+                                        </div>
+                                    </input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class = "col">
+                                <p>previous searches - need to dynamically create</p>
+                                <!-- these will get dynamically created with jquery -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "col"> second column
+                <!-- this is the right side -->
+                <div class="container">
+                    <div class = "row">
+                        <div class = "col bg-success">
+                            <p> Selected city info</p>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col bg-success">
+                            <p> Tempurature</p>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col bg-success">
+                            <p> Humidity</p>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col bg-success">
+                            <p> Wind Speed</p>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col bg-success">
+                            <p> UV Info</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col bg-danger">
+                        <h3> 5 Day Forecast</h3>
+                    </div>
+                </div>
+                <div class= "row">
+                    <div class = "col bg-warning">
+                        <p>1st day</p>
+                    </div>
+                    <div class = "col col be-primary">
+                        <p>2nd day</p>
+                    </div>
+                    <div class = "col bg-warning">
+                        <p>3rd day</p>
+                    </div>
+                    <div class = "col be-primary">
+                        <p>4th day</p>
+                    </div>
+                    <div class = "col bg-warning">
+                        <p>5th day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
-
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src = "assets/js/script.js">
 </script>
