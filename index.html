@@ -35,21 +35,23 @@
                             <div class = "col bg-warning">
                                 <h4>Search for a City:</h4>
                                 <form>
-                                    <input id="robert" type="text" name="robert">
+                                    <input id="search" type="text" name="search">
                                     <button id="searchBtn" type="submit">button</button>
                                 </form>
                             </div>
                         </div>
                         <div class="row">
-                            <div class = "col">
-                                <p>previous searches - need to dynamically create</p>
+                            <div id="prevSearched" class = "col">
+                                <form id="searchedCities">
+                               <!-- <p>previous searches - need to dynamically create</p> -->
                                 <!-- these will get dynamically created with jquery -->
+                               </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class = "col-8"> second column
+            <div class = "col-8"> second column &deg;
                 <!-- this is the right side -->
                 <div class="container">
                     <div class = "row">
@@ -58,47 +60,42 @@
                         </div>
                     <!-- </div> -->
                     <!-- <div class = "row"> -->
-                        <div class = "col ">
-                                <img id="currCondIcon" src= "http://openweathermap.org/img/wn/10n@2x.png" alt="image"></a>
+                        <div class = "col">
+                                <img id="currCondIcon" src= "#" alt="image"></a>
                         </div>
                     </div>
                     <div class = "row">
-                        <div class = "col bg-success">
+                        <div class = "col">
                                 <p id="currTemp"></p>
                             <p id="currHumid"></p>
                         </div>
                     </div>
                     <div class = "row">
-                        <div class = "col bg-success">
+                        <div class = "col">
                             <p id="currWind"></p>
                         </div>
                     </div>
                     <div class = "row">
-                        <div class = "col bg-success">
-                            <p id="currUV"> UV Info:</p>
+                        <div class = "col">
+                            <p id="currUV"> UV Index:</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col bg-danger">
+                    <div class="col">
                         <h3> 5 Day Forecast</h3>
                     </div>
                 </div>
                 <div class= "row">
-                    <div id="forecast1" class = "col bg-warning">
-                        <!-- <p>1st day</p> -->
+                    <div id="forecast1" class = "col forecastInfo m-2 bg-primary">
                     </div>
-                    <div id = "forecast2" class = "col col be-primary">
-                        <!-- <p>2nd day</p> -->
+                    <div id = "forecast2" class = "col forecastInfo m-2 bg-primary">
                     </div>
-                    <div id = "forecast3" class = "col bg-warning">
-                        <!-- <p>3rd day</p> -->
+                    <div id = "forecast3" class = "col forecastInfo m-2 bg-primary">
                     </div>
-                    <div id = "forecast4" class = "col be-primary">
-                        <!-- <p>4th day</p> -->
+                    <div id = "forecast4" class = "col forecastInfo m-2 bg-primary">
                     </div>
-                    <div id = "forecast5" class = "col bg-warning">
-                        <!-- <p>5th day</p> -->
+                    <div id = "forecast5" class = "col forecastInfo m-2 bg-primary">
                     </div>
                 </div>
             </div>
