@@ -1,56 +1,21 @@
-// Instructions
-// Build a weather dashboard application with search functionality to find current weather 
-// conditions and the future weather outlook for multiple cities. 
-
-// Use the OpenWeather API to retrieve weather data for cities. 
-// The documentation includes a section called "How to start" that will provide basic setup and usage instructions.
-
-  // Display the following under current weather conditions:
-      // UV index
-
-
-// *** Hints ***
-    // Create multiple functions within your application to handle the different parts of the dashboard:
-        // UV index
-
-
-
-// You will need to hardcode some of the parameters in the API's URL. 
-// User input will determine some of the other parameters.
-// should the search be limited to the US?
 
 // *** functionality todos ***
 // how to handle invalid city names
-// why doesn't button work second time?
-//  UV info into forecast data
-//  degree symbol in temps
+// change behavior when user presses enter after entering name
+  // name disappears and nothing happens
+// UV info into forecast data
+// degree symbol in temps
 
 //  *** Formatting Items ***
 // make icon small in current weather
-// add degree icon to temp
-// fix search & button 
-// put border around second column
-// remove/update colors
-// fix previous search buttons
-// are headings the right size?
 
-// **** Minimum Requirements ***
-    // Functional, deployed application.
-    // GitHub repository with a unique name and a README describing the project. (rename repository)
-    // User can search for weather reports by city using the openweathermap API.
-    // After searching for a city, the following information is displayed:
-        // Current temperature
-        // Current humidity
-        // Windspeed
-        // Uv index
-        // 5 day forecast
+// *** other to-dos ***
+// rename repository
 
 // ****  BONUS  ****
     // Use the Geolocation API to add the user's current location to the initial landing page.
     // Add the application to your portfolio.
 
-  // This is our API key - update this to my API Key
-  // var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
 $(document).ready(function(){
   var apiKey = "abe3fd78d43eae49a7a10d2d9c80722e"; 
@@ -72,6 +37,7 @@ $(document).ready(function(){
 
 
 $("#searchBtn").on("click", function(event){
+  
     event.preventDefault();
 
     var cityToSearch = $("#search").val(); 
@@ -100,17 +66,12 @@ $("#searchBtn").on("click", function(event){
   })
     .then(function(response) {
 
-      // console.log(response);
-
       cityLat = response.coord.lat;
       cityLon = response.coord.lon;
       getUvInfo(cityLat,cityLon);
     
 
   var currCity = response.name;
-  // if (!currCity){
-  //   return;
-  // }
 
   var currDate = moment().format("(MM/DD/YYYY)"); 
   var currTemp = response.main.temp;
@@ -142,7 +103,6 @@ $("#searchBtn").on("click", function(event){
   })
     .then(function(response) {
 
-      // console.log(response);
 
   currUvIndex = response[0].value;
   forecastIndex0 = response[1].value;
@@ -183,6 +143,7 @@ $("#searchBtn").on("click", function(event){
       var forecastHumid = response.list[days[i]].main.humidity;
       var forecastIcon = response.list[days[i]].weather[0].icon;
       var forecastConditionsUrl = "http://openweathermap.org/img/wn/"+forecastIcon+"@2x.png";
+      // var forecastConditionsUrl = "http://openweathermap.org/img/wn/"+forecastIcon+`@2x.png" width="50" height="50"`;
 
       var date = $("<p>");
       var icon = $("<img>");
@@ -205,7 +166,7 @@ function renderCitiesSearched(){
   weather.forEach(function(city, index) {
 
     var cityName = weather[index];
-    var prevSearch = $(`<button type="button" class="prevSearchBtn w-100">`);
+    var prevSearch = $(`<button type="button" class="btn btn-block btn-outline-secondary prevSearchBtn mt-0">`);
     prevSearch.attr("id", "prevSearchBtn"+index);
     prevSearch.attr("data-index", index);
     prevSearch.text(cityName);
@@ -214,11 +175,14 @@ function renderCitiesSearched(){
   });
 };
 
-$(".prevSearchBtn").on("click", function(event){
-  event.preventDefault();
-  console.log(this);
+// $("#searchedCities").on("click", function(event){
+  $("#prevSearched").on("click", function(event){
+    var target = $(event.target);
+  // console.log(target);
   
-  var selectedBtn = $(this).attr("data-index");
+    event.preventDefault();
+  
+  var selectedBtn = target.attr("data-index");
 
   var selectedCity = weather[selectedBtn];
 

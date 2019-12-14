@@ -20,82 +20,84 @@
 
 <body>
 
-    <div class = "container">Container
+    <div class = "container">
         <div class = "row bg-dark">
             <div class = "col text-white text-center">
                 <h1>Weather Dashboard</h1>
             </div>
         </div>
         <br>
-        <div class="row bg-info">
-            <div class = "col-4 bg-dark">first column
+        <div class="row">
+            <div class = "col-4">
                 <div class = "row bg-light">
                     <div class = "col">
                         <div class="row">
-                            <div class = "col bg-warning">
-                                <h4>Search for a City:</h4>
+                            <div class = "col">
+                                <h5>Search for a City:</h5>
                                 <form>
-                                    <input id="search" type="text" name="search">
-                                    <button id="searchBtn" type="submit">button</button>
+                                    <div class="input-group md-form form-sm form-2 w-75 mb-2 pl-0">
+                                        <input id="search" class="form-control my-0 py-1 red-border" type="text" placeholder="" aria-label="Search">
+                                        <div class="input-group-append">
+                                            <button type ="button" class="input-group-text btn bg-primary searchBtn " id="searchBtn">
+                                            <i class="fas fa-search text-white" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
                         <div class="row">
                             <div id="prevSearched" class = "col">
                                 <form id="searchedCities">
-                               <!-- <p>previous searches - need to dynamically create</p> -->
-                                <!-- these will get dynamically created with jquery -->
                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class = "col-8"> second column &deg;
-                <!-- this is the right side -->
-                <div class="container">
+            <div class = "col-8"> 
+                <div class="container border border-secondary rounded mb-1">
                     <div class = "row">
-                        <div class = "col bg-success">
-                            <h4 id="searchedCity"> Searched city info</h4>
-                        </div>
-                    <!-- </div> -->
-                    <!-- <div class = "row"> -->
                         <div class = "col">
-                                <img id="currCondIcon" src= "#" alt="image"></a>
+                            <div class= "row h-50">
+                                <div class ="col-7">
+                                        <h4 id="searchedCity" class="align-middle w-100 mt-4"></h4>
+                                </div>
+                                <div class="col-5">
+                                    <img id="currCondIcon" src= "#" alt="image"></a>
+                                </div>
+                            </div>  
+                            <div class="row w-50">
+                                <div class="col-12">
+                                </div>
+                            </div>
+                    
                         </div>
                     </div>
+
                     <div class = "row">
                         <div class = "col">
-                                <p id="currTemp"></p>
+                            <p id="currTemp"></p>
                             <p id="currHumid"></p>
-                        </div>
-                    </div>
-                    <div class = "row">
-                        <div class = "col">
                             <p id="currWind"></p>
-                        </div>
-                    </div>
-                    <div class = "row">
-                        <div class = "col">
-                            <p id="currUV"> UV Index:</p>
+                            <p id="currUV"></p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h3> 5 Day Forecast</h3>
+                        <h3>5 Day Forecast</h3>
                     </div>
                 </div>
                 <div class= "row">
-                    <div id="forecast1" class = "col forecastInfo m-2 bg-primary">
+                    <div id="forecast1" class = "col forecastInfo m-2 bg-primary rounded">
                     </div>
-                    <div id = "forecast2" class = "col forecastInfo m-2 bg-primary">
+                    <div id ="forecast2" class = "col forecastInfo m-2 bg-primary rounded">
                     </div>
-                    <div id = "forecast3" class = "col forecastInfo m-2 bg-primary">
+                    <div id ="forecast3" class = "col forecastInfo m-2 bg-primary rounded">
                     </div>
-                    <div id = "forecast4" class = "col forecastInfo m-2 bg-primary">
+                    <div id ="forecast4" class = "col forecastInfo m-2 bg-primary rounded">
                     </div>
-                    <div id = "forecast5" class = "col forecastInfo m-2 bg-primary">
+                    <div id ="forecast5" class = "col forecastInfo m-2 bg-primary rounded">
                     </div>
                 </div>
             </div>
